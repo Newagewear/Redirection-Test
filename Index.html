@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Redirect Page</title>
+</head>
+<body>
+    <script>
+        // Get the click count from the URL parameter
+        const urlParams = new URLSearchParams(window.location.search);
+        const clickCount = parseInt(urlParams.get('clickCount')) || 0;
+
+        // Check if click count is odd or even and redirect accordingly
+        if (clickCount % 2 === 0) {
+            window.location.replace('https://wa.link/j3fngn');
+        } else {
+            window.location.replace('https://wa.link/yvv2qu');
+        }
+    </script>
+</body>
+</html>
