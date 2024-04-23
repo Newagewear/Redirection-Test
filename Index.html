@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WhatsApp Redirect</title>
+</head>
+<body>
+    <script>
+        // Function to handle redirection
+        function redirectToWhatsApp() {
+            // Parsing 'clickCount' from URL parameters
+            const urlParams = new URLSearchParams(window.location.search);
+            const clickCount = parseInt(urlParams.get('clickCount')) || 0;
+
+            // Determining the WhatsApp link based on clickCount
+            const whatsappLink = clickCount % 2 === 0 ? 'https://wa.link/j3fngn' : 'https://wa.link/yvv2qu';
+
+            // Redirecting to the determined WhatsApp link
+            window.location.replace(whatsappLink);
+        }
+
+        // Ensuring the script runs after the document has loaded
+        document.addEventListener('DOMContentLoaded', redirectToWhatsApp);
+    </script>
+</body>
+</html>
